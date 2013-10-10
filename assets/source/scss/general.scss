@@ -1,0 +1,25 @@
+/* ===========================================================================
+	General Styles
+	========================================================================== */
+	html {
+		font-size:62.5%;
+	}
+
+	.row {
+		width: 100%;
+		max-width: 80em;
+	}
+
+	.row-full {
+		max-width: none;
+		.column, .columns {
+			padding: 0;
+		}
+	}
+
+	.module {
+		margin-bottom: 2em;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
