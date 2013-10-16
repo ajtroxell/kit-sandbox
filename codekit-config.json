@@ -805,16 +805,14 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/source\/js\/third_party\/foundation\/foundation.dropdown.js" : {
+    "\/assets\/source\/kit\/includes\/_footer.kit" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/source\/js\/third_party\/foundation\/foundation.dropdown.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/source\/js\/js\/foundation.dropdown-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/assets\/source\/kit\/includes\/_footer.kit",
+      "outputAbbreviatedPath" : "\/assets\/_footer.html",
+      "fileType" : 65536
     },
     "\/assets\/css\/images\/file-structure\/05.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -827,6 +825,17 @@
       "initialSize" : 73514,
       "fileType" : 4096
     },
+    "\/assets\/source\/js\/third_party\/foundation\/foundation.dropdown.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/source\/js\/third_party\/foundation\/foundation.dropdown.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/source\/js\/js\/foundation.dropdown-ck.js",
+      "fileType" : 64
+    },
     "\/assets\/source\/scss\/third_party\/foundation\/components\/_orbit.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -838,15 +847,6 @@
       "outputAbbreviatedPath" : "\/assets\/source\/scss\/third_party\/css\/_orbit.css",
       "fileType" : 4,
       "debugStyle" : 0
-    },
-    "\/assets\/source\/kit\/includes\/_footer.kit" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/source\/kit\/includes\/_footer.kit",
-      "outputAbbreviatedPath" : "\/assets\/_footer.html",
-      "fileType" : 65536
     },
     "\/assets\/source\/scss\/third_party\/foundation\/components\/_clearing.scss" : {
       "ignoreWasSetByUser" : 0,
