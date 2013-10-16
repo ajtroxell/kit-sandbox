@@ -28,9 +28,11 @@ front-end framework in the world.">here</a>. The current version of the Foundati
 						</li>
 						<li>
 							<h4 id="foundation">Foundation &amp; IE8</h4>
-							<p>If you are familiar with Foundation then you know that Foundation 4 is incompatible with IE8. Lucky for you, we have (with the help of the interwebs) found a solution. Responsiveness will obviously not work in IE8, but the grid works fine, thanks to an IE8 specific grid stylesheet found in <code>/assets/css/third_party/foundation</code> called <code>foundation-ie8.scss</code>.</p>
-							<p>This file is compiled into <code>/assets/css/ie8.css</code> and included with a IE conditional statement in <code>_header.kit</code> file.</p>
-							<small>An alternative html doctype declaration and conditional statement is utilized in our header to ensure proper rendering of the grid in IE while maintaining the HTML5 doctype in all other browsers. The IE8 specific foundation grid is targeted via the output of a conditional that adds a class of <code>lt-ie9</code> to the HTML tag in <code>_header.kit</code>.</small>
+							<p>If you are familiar with Foundation then you know that Foundation 4 is incompatible with IE8. Lucky for you, we have (with the help of the interwebs) found a solution.</p>
+							<p>Thanks to an IE8 specific grid stylesheet found in <code>/assets/css/third_party/foundation/components</code> called <code>grid-ie8.scss</code>, the grid works great. Responsiveness <i>could</i> work in IE8, but there is really no point, so you need to specify a set width in the <code>grid-ie8.scss</code> file.</p>
+							<p>This file is compiled into <code>/assets/css/ie8.css</code> and included with a IE conditional statement in <code>_header.kit</code> file. You need to set the <code>$row-width</code> variable as well as <code>.lt-ie9 .row { width: 940px; min-width: 940px; }</code> to the same values.</p>
+							<p>
+							<small>The IE8 specific grid is targeted via the output of a conditional that adds a class of <code>lt-ie9</code> to the HTML tag in <code>_header.kit</code>.</small>
 						</li>
 						<li>
 							<h4>File Structure (gallery)</h4>
