@@ -1,5 +1,68 @@
 /* ===========================================================================
-	Mixins & Variables
+	Presets & Variables
 	========================================================================== */
-	@import "_variables";
-	@import "_mixins";
+	@import
+	"_variables",
+	"_mixins";
+
+	/*  Foundation
+		========================================================================== */
+		@import "third_party/foundation/normalize";
+
+		// Make sure the charset is set appropriately
+		@charset "UTF-8";
+
+		// This includes all of the foundation global elements that are needed to work with any of the other files.
+		@import "third_party/foundation/variables";
+
+		// Foundation Components
+		@import
+		  "third_party/foundation/components/global",
+		  "third_party/foundation/components/grid-ie8",
+		  "third_party/foundation/components/visibility",
+		  "third_party/foundation/components/block-grid",
+		  "third_party/foundation/components/type",
+		  "third_party/foundation/components/buttons",
+		  "third_party/foundation/components/forms",
+		  "third_party/foundation/components/button-groups",
+		  "third_party/foundation/components/dropdown-buttons",
+		  "third_party/foundation/components/split-buttons",
+		  "third_party/foundation/components/flex-video",
+		  "third_party/foundation/components/section",
+		  "third_party/foundation/components/top-bar",
+		  "third_party/foundation/components/orbit",
+		  "third_party/foundation/components/reveal",
+		  "third_party/foundation/components/joyride",
+		  "third_party/foundation/components/clearing",
+		  "third_party/foundation/components/alert-boxes",
+		  "third_party/foundation/components/breadcrumbs",
+		  "third_party/foundation/components/custom-forms",
+		  "third_party/foundation/components/keystrokes",
+		  "third_party/foundation/components/labels",
+		  "third_party/foundation/components/inline-lists",
+		  "third_party/foundation/components/pagination",
+		  "third_party/foundation/components/panels",
+		  "third_party/foundation/components/pricing-tables",
+		  "third_party/foundation/components/progress-bars",
+		  "third_party/foundation/components/side-nav",
+		  "third_party/foundation/components/sub-nav",
+		  "third_party/foundation/components/switch",
+		  "third_party/foundation/components/magellan",
+		  "third_party/foundation/components/tables",
+		  "third_party/foundation/components/thumbs",
+		  "third_party/foundation/components/tooltips",
+		  "third_party/foundation/components/dropdown";
+
+/* ===========================================================================
+	Default Styles
+	========================================================================== */
+	@import
+	"general",
+	"alignment",
+	"element-resets",
+	"modifiers",
+	"styles";
+
+	/*  Third Party
+		========================================================================== */
+		@import "third_party/magnific-popup/magnific-popup";

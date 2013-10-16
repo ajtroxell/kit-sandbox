@@ -1,12 +1,11 @@
 /* ===========================================================================
 	General Styles
 	========================================================================== */
-	html {
-		margin: 0;
-		font-size: 62.5%;
+	nav.top-bar {
+		margin-bottom: 2em;
 	}
-
-	body {
-		-ms-word-wrap: break-word;
-		word-wrap: break-word;
+	.btn,.button,button,input[type=submit] {
+		&:focus {
+			outline: none;
+		}
 	}

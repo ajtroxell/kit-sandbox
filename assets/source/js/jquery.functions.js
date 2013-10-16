@@ -11,9 +11,14 @@ jQuery(document).ready(function($) {
             e.target.value = e.target.defaultValue;
     });
 
-    //initialize magnific popup
+    $('a[href*=".jpg"], a[href*=".jpeg"], a[href*=".png"], a[href*=".gif"]').each(function(){
+        if ($(this).parents('.gallery').length == 0) {
+            $(this).magnificPopup({type:'image'});
+        }
+    });
+
     $('.file-structure').magnificPopup({
-        delegate: 'a', // child items selector, by clicking on it popup will open
+        delegate: 'a',
         type: 'image',
         image: {
             titleSrc: 'rel'

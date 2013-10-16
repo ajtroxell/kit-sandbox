@@ -13,16 +13,7 @@
 		margin-top: 0;
 	}
 
-	h3 {
-		@include font-size(26,30);
-	}
-
-	h4 {
-		@include font-size(22,25);
-	}
-
 	h5 {
-		@include font-size(19,23);
 		text-transform: uppercase;
 	}
 
@@ -30,10 +21,6 @@
 		h2, h3, h4, h5, h6 {
 			margin-top: .5em;
 		}
-	}
-
-	p, blockquote, ul, ol {
-		@include font-size(16);
 	}
 
 	ul, ol {
@@ -52,8 +39,8 @@
 		}
 	}
 
-	small {
-		@include font-size(11,13);
+	.top-bar li {
+		margin: 0;
 	}
 
 	hr {

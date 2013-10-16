@@ -1,5 +1,5 @@
 <!--[if lte IE 8]><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><![endif]-->
-<!--[if gt IE 8]><!DOCTYPE html><![endif]-->
+<!--[if gt IE 8]><!--><!DOCTYPE html><!--<![endif]-->
 <!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
 <!--[if IE 7]><html class="lt-ie9 lt-ie8" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
 <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
@@ -14,17 +14,65 @@
 	<meta name="description" content="<!--$meta_description-->" /> 
 
 	<!-- Included CSS Files (Compressed) -->
-	<link type="text/css" rel="stylesheet" href="assets/css/master.css"/>
 	<!--[if lte IE 8]>
-		<link type="text/css" rel="stylesheet" href="assets/css/third_party/foundation/foundation-ie8.css"/>
-		<link type="text/css" rel="stylesheet" href="assets/css/ie8.css"/>
+		<link rel="stylesheet" href="assets/css/ie8.css"/>
 	<![endif]-->
+	<!--[if gt IE 8]><!-->
+		<link rel="stylesheet" href="assets/css/master.css" />
+	<!--<![endif]-->
 
 	<!-- Foundation Modernizr -->
-	<script type="text/javascript" src="assets/js/third_party/foundation/custom.modernizr-ck.js"></script>
+	<script src="assets/js/third_party/foundation/custom.modernizr-ck.js"></script>
 
-	<link rel="shortcut icon" href="assets/css/images/favicon.ico"/>
+	<link rel="shortcut icon" href="assets/css/images/favicon.ico" >
 
 </head>
 
 <body>
+
+	<nav class="top-bar">
+		<ul class="title-area">
+			<li class="name">
+				<header>
+					<h1><a href="#">Kit Sandbox</a></h1>
+				</header>
+			</li>
+			<li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
+  		</ul>
+
+		<section class="top-bar-section">
+			<ul>
+				<li class="divider"></li>
+				<li>
+					<a href="#inside">What's Inside</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="#foundation">Foundation</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="#kit">Kit Language</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="#grid">The Grid</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="#sass">"Modular" SASS/SCSS</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="#jquery">jQuery</a>
+				</li>
+				<li class="divider"></li>
+			</ul>
+		</section>
+	</nav>
+
+	<div class="row">
+		<div class="small-12 small-centered medium-10 large-10 large-centered columns">
+			<p>The Kit Sandbox is a default file and template structure for rapid prototyping of websites. Kit is used in the Wireframing and UI process to easily build template files while maintaining the ability to include variables and other dynamic content.</p>
+		</div>
+	</div>

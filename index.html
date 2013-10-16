@@ -1,6 +1,6 @@
 
 <!--[if lte IE 8]><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><![endif]-->
-<!--[if gt IE 8]><!DOCTYPE html><![endif]-->
+<!--[if gt IE 8]><!--><!DOCTYPE html><!--<![endif]-->
 <!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
 <!--[if IE 7]><html class="lt-ie9 lt-ie8" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
 <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><![endif]-->
@@ -14,57 +14,107 @@
 	<meta name="description" content="The Kit Sandbox is a default file and template structure for rapid prototyping of websites. Kit is used in the Wireframing and UI process to easily build template files while maintaining the ability to include variables and other dynamic content." /> 
 
 	<!-- Included CSS Files (Compressed) -->
-	<link type="text/css" rel="stylesheet" href="assets/css/master.css"/>
 	<!--[if lte IE 8]>
-		<link type="text/css" rel="stylesheet" href="assets/css/third_party/foundation/foundation-ie8.css"/>
-		<link type="text/css" rel="stylesheet" href="assets/css/ie8.css"/>
+		<link rel="stylesheet" href="assets/css/ie8.css"/>
 	<![endif]-->
+	<!--[if gt IE 8]><!-->
+		<link rel="stylesheet" href="assets/css/master.css" />
+	<!--<![endif]-->
 
 	<!-- Foundation Modernizr -->
-	<script type="text/javascript" src="assets/js/third_party/foundation/custom.modernizr-ck.js"></script>
+	<script src="assets/js/third_party/foundation/custom.modernizr-ck.js"></script>
 
-	<link rel="shortcut icon" href="assets/css/images/favicon.ico"/>
+	<link rel="shortcut icon" href="assets/css/images/favicon.ico" >
 
 </head>
 
 <body>
 
-<div class="row">
-	<div class="small-12 small-centered medium-10 large-7 large-centered columns">
+	<nav class="top-bar">
+		<ul class="title-area">
+			<li class="name">
+				<header>
+					<h1><a href="#">Kit Sandbox</a></h1>
+				</header>
+			</li>
+			<li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
+  		</ul>
 
-		<header>
-			<h1>Kit Sandbox</h1>
+		<section class="top-bar-section">
+			<ul>
+				<li class="divider"></li>
+				<li>
+					<a href="#inside">What's Inside</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="#foundation">Foundation</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="#kit">Kit Language</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="#grid">The Grid</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="#sass">"Modular" SASS/SCSS</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="#jquery">jQuery</a>
+				</li>
+				<li class="divider"></li>
+			</ul>
+		</section>
+	</nav>
+
+	<div class="row">
+		<div class="small-12 small-centered medium-10 large-10 large-centered columns">
 			<p>The Kit Sandbox is a default file and template structure for rapid prototyping of websites. Kit is used in the Wireframing and UI process to easily build template files while maintaining the ability to include variables and other dynamic content.</p>
-		</header>
+		</div>
+	</div>
+
+<div class="row">
+	<div class="small-12 small-centered medium-10 large-10 large-centered columns">
 
 		<section class="module">
-			<h2>What's Inside</h2>
+			<h2 id="inside">What's Inside</h2>
 			<p>The Kit Sandbox contains everything you need to get started with "rapid prototyping". Here is what you get:</p>
 			<ul>
 				<li>
-					<h3>Foundation and Foundation</h3>
+					<h3>Foundation</h3>
 					<p>The Kit Sandbox is built on Foundation, an advanced responsive front-end framework from ZURB. You can learn everything you need to know about Foundation <a href="http://foundation.zurb.com/docs/" title="The most advanced responsive
 front-end framework in the world.">here</a>. The current version of the Foundation Framework is version 4.</p>
-					<p>We have also included the Foundation 4 Medium Grid (experimental), you can learn more about it <a href="http://foundation.zurb.com/docs/components/grid.html#medium-grid">here</a></p>
+				</li>
 					<ul>
 						<li>
-							<h4>Foundation &amp; IE8</h4>
-							<p>If you are familiar with Foundation then you know that Foundation 4 is incompatible with IE8. Lucky for you, we have (with the help of the interwebs) found a solution. Responsiveness will obviously not work in IE8, but the grid works fine, thanks to an IE8 specific grid stylesheet found in <code>/assets/source/css/third_party/foundation</code> called <code>foundation-ie8.scss</code>.</p>
-							<p>This file is compiled to <code>/assets/css/third_party/foundation/foundation-ie8.css</code> and included with a IE conditional statement in <code>_header.kit</code> file.</p>
-							<p><small>An alternative html doctype declaration and conditional statement is utilized in our header to ensure proper rendering of the grid in IE while maintaining the HTML5 doctype in all other browsers. The IE8 specific foundation grid is targeted via the output of a conditional that adds a class of <code>lt-ie9</code> to the HTML tag in <code>_header.kit</code>.</small></p>
+							<h4 id="foundation">Foundation Basics</h4>
+							<p>Foundation uses a simple nesting framework of twelve equals columns per row. Meaning that each row <strong>can</strong> contain up to twelve columns.</p>
+							<p>Here is a small example of properly structured Foundation code:</p>
+							<a href="/assets/css/images/foundation-structure.jpg"><img src="/assets/css/images/foundation-structure.jpg"></a>
+							<p>The Kit Sandbox includes the <strong>experimental</strong> <a href="http://foundation.zurb.com/docs/components/grid.html#medium-grid">medium-grid</a> by default.</p>
+						</li>
+						<li>
+							<h4 id="foundation">Foundation &amp; IE8</h4>
+							<p>If you are familiar with Foundation then you know that Foundation 4 is incompatible with IE8. Lucky for you, we have (with the help of the interwebs) found a solution. Responsiveness will obviously not work in IE8, but the grid works fine, thanks to an IE8 specific grid stylesheet found in <code>/assets/css/third_party/foundation</code> called <code>foundation-ie8.scss</code>.</p>
+							<p>This file is compiled into <code>/assets/css/ie8.css</code> and included with a IE conditional statement in <code>_header.kit</code> file.</p>
+							<small>An alternative html doctype declaration and conditional statement is utilized in our header to ensure proper rendering of the grid in IE while maintaining the HTML5 doctype in all other browsers. The IE8 specific foundation grid is targeted via the output of a conditional that adds a class of <code>lt-ie9</code> to the HTML tag in <code>_header.kit</code>.</small>
 						</li>
 						<li>
 							<h4>File Structure (gallery)</h4>
 							<ul class="large-block-grid-5 file-structure">
-								<li><a href="assets/css/images/file-structure/00.jpg"><img src="assets/css/images/file-structure/thumbs/00.jpg"></a></li>
-								<li><a href="assets/css/images/file-structure/01.jpg"><img src="assets/css/images/file-structure/thumbs/01.jpg"></a></li>
-								<li><a href="assets/css/images/file-structure/02.jpg"><img src="assets/css/images/file-structure/thumbs/02.jpg"></a></li>
-								<li><a href="assets/css/images/file-structure/03.jpg"><img src="assets/css/images/file-structure/thumbs/03.jpg"></a></li>
-								<li><a href="assets/css/images/file-structure/04.jpg"><img src="assets/css/images/file-structure/thumbs/04.jpg"></a></li>
-								<li><a href="assets/css/images/file-structure/05.jpg"><img src="assets/css/images/file-structure/thumbs/05.jpg"></a></li>
-								<li><a href="assets/css/images/file-structure/06.jpg"><img src="assets/css/images/file-structure/thumbs/06.jpg"></a></li>
-								<li><a href="assets/css/images/file-structure/07.jpg"><img src="assets/css/images/file-structure/thumbs/07.jpg"></a></li>
-								<li><a href="assets/css/images/file-structure/08.jpg"><img src="assets/css/images/file-structure/thumbs/08.jpg"></a></li>
+								<li><a href="/assets/css/images/file-structure/00.jpg"><img src="/assets/css/images/file-structure/thumbs/00.jpg"></a></li>
+								<li><a href="/assets/css/images/file-structure/01.jpg"><img src="/assets/css/images/file-structure/thumbs/01.jpg"></a></li>
+								<li><a href="/assets/css/images/file-structure/02.jpg"><img src="/assets/css/images/file-structure/thumbs/02.jpg"></a></li>
+								<li><a href="/assets/css/images/file-structure/03.jpg"><img src="/assets/css/images/file-structure/thumbs/03.jpg"></a></li>
+								<li><a href="/assets/css/images/file-structure/04.jpg"><img src="/assets/css/images/file-structure/thumbs/04.jpg"></a></li>
+								<li><a href="/assets/css/images/file-structure/05.jpg"><img src="/assets/css/images/file-structure/thumbs/05.jpg"></a></li>
+								<li><a href="/assets/css/images/file-structure/06.jpg"><img src="/assets/css/images/file-structure/thumbs/06.jpg"></a></li>
+								<li><a href="/assets/css/images/file-structure/07.jpg"><img src="/assets/css/images/file-structure/thumbs/07.jpg"></a></li>
+								<li><a href="/assets/css/images/file-structure/08.jpg"><img src="/assets/css/images/file-structure/thumbs/08.jpg"></a></li>
 							</ul>
 							<ul>
 								<li>
@@ -72,75 +122,92 @@ front-end framework in the world.">here</a>. The current version of the Foundati
 									<p>All image/graphics to be used in the front-end of a site should be saved in <code>/assets/css/images</code>, and them optimized with <a href="http://imageoptim.com/">ImageOptim</a></p>
 									<p>Any files of a specific "category" such as, placeholders, galleries, or say "rodent" should be saved in their own sub-folder.</p>
 								</li>
-							</ul>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<h3>How to Use</h3>
-					<p>The Kit Sanbox already contains a <code>codekit.json</code> file, so all you have to do to get started is drop the project in. Keep in mind this is just a standard starting point for rapid prototyping and it is only a basic set up. Expand upon it, grow it, make it better, then share it. (It really isn't anything special!)</p>
+					<h3 id="kit">Prototyping with the Kit Language</h3>
 					<ul>
 						<li>
-							<h4>Prototyping with the Kit Language</h4>
 							<p>The Kit language is an open-source CodeKit only (for the time being) language that operates much like PHP includes or server-side includes, but better. Kit files can contain variables and imports of other files and are compiled into a single HTML file. Kit files are stored in <code>/assets/source/kit</code> with includes (imports) being stored in the sub-folder <code>includes</code> and output to the root of the project. You can read more on the usage of the Kit language <a href="http://incident57.com/codekit/kit.php" title="The Kit Language">here</a>.</p>
 							<p>Variables are extremely dynamic and allow you to do things that are simply not possible with regular HTML, while still generating static HTML files. For instance, <code>this text</code> and <code>this text as well</code>, are variables set within the <code>index.kit</code> file.</p>
 							<p>Variables are especially handy when it comes to active classes for nav elements and meta tags. Meta tags are set with variables in this page and passed to the <code>_header.kit</code> file when compiled by CodeKit.</p>
 						</li>
-						<li>
-							<h4>"Modular" SASS/SCSS</h4>
-							<p>All* SCSS files are compiled via a <code>master.scss</code> file in the <code>/assets/source/css</code> folder, and output with minification to <code>/assets/css</code>. CSS properties are divided into SCSS partials to keep things organized. Most of these can be left as is but may need built upon as projects expand and more styles might be needed. Here is a description of each:</p>
+					</ul>
+				</li>
+				<li>
+					<h3 id="sass">"Modular" SASS/SCSS</h3>
+					<ul>
+						<li><p>All* SCSS files are compiled via a <code>master.scss</code> file in the <code>/assets/source/css</code> folder, and output with minification to <code>/assets/css</code>. CSS properties are divided into SCSS partials to keep things organized. Most of these can be left as is but may need built upon as projects expand and more styles might be needed. Here is a description of each:</p>
 							<ul>
-								<li><h4>styles.scss</h4>
+								<li>
+									<h4>styles.scss</h4>
 									<p>Styles is your overall site styles. Anything that cannot be controlled by any of the following files goes here.</p>
 								</li>
-								<li><h4>Responsive.scss</h4>
+								<li>
+									<h4>Responsive.scss</h4>
 									<p>Reponsive contains styles within media queries (break points). All responsive styles, aside from those built into Foundation 4 are here.</p>
 								</li>
-								<li><h4>_mixins.scss</h4>
-									<p>A file of mixins that are used as an alternative or in addition to using Bourbon. Sometimes CodeKit has fits with Bourbon projects for some odd reason. Plus, this keeps things simple if you are moving from a Mac to a PC and need to use a precompiler such as <a href="http://alphapixels.com/prepros/" title="Compile Sass, less or any preprocessing language" target="new">Prepos</a> that does not respect CodeKit project settings.</p>
+								<li>
+									<h4>_mixins.scss</h4>
+									<p>A file of mixins that are used as an alternative to using Bourbon. Sometimes CodeKit has fits with Bourbon projects for some odd reason. Plus, this keeps things simple if you are moving from a Mac to a PC and need to use a precompiler such as <a href="http://alphapixels.com/prepros/" title="Compile Sass, less or any preprocessing language" target="new">Prepos</a> that does not respect CodeKit project settings.</p>
 								</li>
-								<li><h4>_variables.scss</h4>
+								<li>
+									<h4>_variables.scss</h4>
 									<p>Variables should be fairly obvious. It is a good idea to use variables sparingly, yet keep variables separated by element type, for clarity and ease of changing a property of a single element down the road.</p>
 									<p>For instance, if an aside background happens to be the same HEX color as what would be used for a button, this needs to be two separate variables, E.g. <code>$bg-aside</code> and <code>$bg-btn</code>.</p>
 								</li>
-								<li><h4>alignment.scss</h4>
+								<li>
+									<h4>alignment.scss</h4>
 									<p>Alignment is for just that, alignment. Alignment for text, block, and inline elements. Both for Wordpress installs and general installs, used via a class. So any element or containing element can have a class of <code>alignleft</code> or <code>textleft</code> added to it and will align the contained text accordingly.</p>
 									<p>Check out the file for the full list of classes.</p>
 								</li>
-								<li><h4>element-resets.scss</h4>
+								<li>
+									<h4>element-resets.scss</h4>
 									<p>Element resets are general reset styles for specific "user input" elements, such as H tags, lists, and paragraphs. These <i>may</i> need to be edited per project.</p>
 								</li>
-								<li><h4>general.scss</h4>
+								<li>
+									<h4>general.scss</h4>
 									<p>General is for structural elements. Most likely these will not need touched, but use discretion. If it won't be used, or utilized in another project, don't put it here.</p>
 								</li>
-								<li><h4>modifiers.scss</h4>
+								<li>
+									<h4>modifiers.scss</h4>
 									<p>Modifiers are standard set of styles created by you for use in altering minor appearances of other elements by using a class. The same way <code>alignment.scss</code> classes work. These will be utilized differently for each project but should not be modified, only additional modifiers added in order to make this the mother of all modifier libraries.</p>
 									<p>For example, the class <code>.recessed</code> can be added to block level elements to add a slight inner-shadow and opaque background to give it a "pushed in" appearance.</p>
 								</li>
-								<li><h4>ie8.scss*</h4>
-									<p>ie8.scss contains styles specific to ie8. This is the only IE specific stylesheet by default, but additional stylesheets may be needed for IE9 and so on. Any IE stylesheets are compiled separately and stored alongside <code>master.scss</code>, in <code>/assets/css</code>, and are then included in <code>_header.kit</code> via IE conditional statements.</p>
+								<li>
+									<h4>ie8.scss*</h4>
+									<p>ie8.scss contains all of the includes in the master.scss, minus the normal foundation grid. Instead the foundation-ie8 grid us used. In this file, all of your IE8 specific styles can be directly input as well. This is the only IE specific stylesheet by default, but additional stylesheets may be needed for IE9 and so on and can be included via conditionals after the <code>master.scss</code> file. Any IE stylesheets are compiled separately and stored alongside <code>master.scss</code>, in <code>/assets/css</code>, and are then included in <code>_header.kit</code> via IE conditional statements.</p>
 								</li>
-								<li><h4>Third Party*</h4>
+								<li>
+									<h4>Third Party*</h4>
 									<p>All CSS/SCSS files not created or maintained by you are stored in dedicated folders in <code>/assets/source/scss/third_party</code> and are imported into the <code>master.scss</code> file. Any IE specific third party files should be compiled separately to <code>/assets/css/third_party</code> and included alongside the compiled <code>ie8.css</code> in <code>_header.kit</code>.</p>
 								</li>
 							</ul>
 						</li>
+					</ul>
+				</li>
+				<li><h3 id="jquery">jQuery</h3>
+					<ul>
 						<li>
-							<h3>jQuery</h3>
 							<p>All* jQuery files are compiled via a <code>master.js</code> file in the <code>/assets/source/js</code> folder, and output to <code>/assets/js</code>.</p>
 							<p>All JS files, aside from Modernizr, are included in <code>_footer.kit</code>.</p>
 							<p>You will know if any file has not been run through CodeKit as it will <strong>not</strong> have <code>-ck</code> added before the <code>.js</code> extension.
 							<ul>
-								<li><h4>jquery.master.js</h4>
+								<li>
+									<h4>jquery.master.js</h4>
 									<p>The master file is simply a placeholder for inclusion of all jQuery files. In CodeKit, all files are "imported" into the master file and compiled then compressed to <code>/assets/js</code>.</p>
 								</li>
-								<li><h4>jquery.functions.js</h4>
+								<li>
+									<h4>jquery.functions.js</h4>
 									<p>The functions file contains all site specific jQuery created by you, and is imported like all others into <code>jquery.master.js</code>.</p>
 								</li>
-								<li><h4>custom.modernizr.js</h4>
+								<li>
+									<h4>custom.modernizr.js</h4>
 									<p>Modernizr is used by foundation, and utlized by our code to bring IE8 (and some older versions of other browsers) up to speed with current HTML5/CSS3 technologies. This is stored in <code>assets/source/js/third_party/foundation</code>, is not compiled into jquery.master.js, and is instead compiled to <code>assets/js/third_party/foundation</code>. It is included in the <code>_header.kit</code> as a stand-alone file.</p>
 								</li>
-								<li><h4>Third Party*</h4>
+								<li>
+									<h4>Third Party*</h4>
 									<p>All jQuery files not created or maintained by you, are stored in dedicated folders in <code>/assets/source/js/third_party</code> and are imported into the <code>jquery.master.js</code> file. Any IE specific third party files should be compiled separately to <code>/assets/js/third_party</code> and included in your HTML.</p>
 								</li>
 							</ul>
@@ -155,7 +222,7 @@ front-end framework in the world.">here</a>. The current version of the Foundati
 
 
 <footer class="row">
-	<div class="small-12 small-centered large-7 large-centered columns">
+	<div class="small-12 small-centered large-10 large-centered columns">
 		<p class="textcenter">&copy;2013 You the User</p>
 	</div>
 </footer>
@@ -163,6 +230,10 @@ front-end framework in the world.">here</a>. The current version of the Foundati
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="assets/js/jquery.master-ck.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.8.9/jquery.magnific-popup.min.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
+
 
 
 </body>
