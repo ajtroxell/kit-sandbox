@@ -33,16 +33,30 @@
 		margin: 0em auto .3em auto;
 	}
 
-	.textleft {
+	.small-textleft {
 		text-align: left;
 	}
 
-	.textcenter {
+	.small-textcenter {
 		text-align: center;
 	}
 
-	.textright {
+	.small-textright {
 		text-align: right;
+	}
+
+	@media only screen and (min-width: 768px) {
+		.large-textleft {
+			text-align: left;
+		}
+
+		.large-textcenter {
+			text-align: center;
+		}
+
+		.large-textright {
+			text-align: right;
+		}
 	}
 
 	.clear {

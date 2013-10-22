@@ -11,12 +11,14 @@ jQuery(document).ready(function($) {
             e.target.value = e.target.defaultValue;
     });
 
+    //apply magnific popup to all links to image files
     $('a[href*=".jpg"], a[href*=".jpeg"], a[href*=".png"], a[href*=".gif"]').each(function(){
         if ($(this).parents('.gallery').length == 0) {
             $(this).magnificPopup({type:'image'});
         }
     });
 
+    //initialize magnifici popup galleries
     $('.file-structure').magnificPopup({
         delegate: 'a',
         type: 'image',
@@ -28,5 +30,11 @@ jQuery(document).ready(function($) {
             navigateByImgClick: true
         }
     });
+
+    //apply class to ie8 list items of first and last
+    if ($('body.lt-ie9')) {
+        $("li:first-child").addClass("first-child");
+        $("li:last-child").addClass("last-child");
+    }
 
 });
