@@ -1,9 +1,8 @@
 /* The Grid ---------------------- */
- $row-width: 940px;
+ $row-width: 1120px;
  .lt-ie9 .row {
-    width: 940px;
-    min-width: 940px;
-    min-width: 768px;
+    width: 1120px;
+    min-width: 1120px;
     margin: 0 auto;
 }
 .lt-ie9 .row .row {
@@ -172,49 +171,9 @@
     clear: both;
 }
 /* AJ Troxell's ie hide and show */
- .lt-ie9 .hide-for-ie {
+.lt-ie9 .hide-for-ie8 {
     display: none !important;
 }
-.lt-ie9 .show-for-ie {
+.lt-ie9 .show-for-ie8 {
     display: inherit !important;
-}
-/* AJ Troxell's block-grid fix */
- .lt-ie9[class*="block-grid-"] {
-    list-style: none;
-    overflow: hidden;
-    &.large-block-grid-2 li {
-        margin: 1%;
-        width: 48%;
-        float: left;
-    }
-    &.large-block-grid-3 li {
-        margin: 1%;
-        width: 31.3333333333333%;
-        float: left;
-    }
-    &.large-block-grid-4 li {
-        margin: 1%;
-        width: 23%;
-        float: left;
-    }
-    &.large-block-grid-5 li {
-        margin: 1%;
-        width: 18%;
-        float: left;
-    }
-    &.large-block-grid-6 li {
-        margin: 1%;
-        width: 14.6666666666667%;
-        float: left;
-    }
-    &.large-block-grid-7 li {
-        margin: 1%;
-        width: 12.2857142857143%;
-        float: left;
-    }
-    &.large-block-grid-8 li {
-        margin: 1%;
-        width: 10.5%;
-        float: left;
-    }
 }

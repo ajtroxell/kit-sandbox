@@ -1,0 +1,65 @@
+//
+// Block Grid Custom IE8 Styles
+//
+// By AJ Troxell
+//
+
+// We use this to allow a block grid in IE8
+.lt-ie9 [class*="block-grid-"] {
+  list-style-type: none !important;
+  overflow: hidden;
+  &.large-block-grid-2 li {
+      margin: 1%;
+      width: 48%;
+      float: left !important;
+  }
+  &.large-block-grid-3 li {
+      margin: 1%;
+      width: 31.3333333333333%;
+      float: left !important;
+  }
+  &.large-block-grid-4 li {
+      margin: 1%;
+      width: 22.6%;
+      float: left !important;
+  }
+  &.large-block-grid-5 li {
+      margin: 1%;
+      width: 17.6%;
+      float: left !important;
+  }
+  &.large-block-grid-6 li {
+      margin: 1%;
+      width: 14.3%;
+      float: left !important;
+  }
+  &.large-block-grid-7 li {
+      margin: 1%;
+      width: 11.9%;
+      float: left !important;
+  }
+  &.large-block-grid-8 li {
+      margin: 1%;
+      width: 10.1%;
+      float: left !important;
+  }
+}
+
+// Allow centered block grid on large displays
+.lt-ie9 {
+  .large-block-grid-2,
+  .large-block-grid-3,
+  .large-block-grid-4,
+  .large-block-grid-5,
+  .large-block-grid-6,
+  .large-block-grid-7,
+  .large-block-grid-8 {
+    &.large-block-grid-centered {
+      text-align: center;
+      li {
+        display: inline-block!important;
+        float: none!important;
+      }
+    }
+  }
+}
